@@ -1,29 +1,7 @@
 import { useState } from "react";
 import { Step1 } from "./Step1";
 import { Step2 } from "./Step2";
-import styled from "styled-components";
-
-const Container = styled.div`
-  width: 400px;
-  background-color: gray;
-`;
-
-const TabButton = styled.button`
-  padding: 1.5rem 0.7rem;
-  background: ${(props) => (props.isActive ? "#595959" : "#2d2d2d")};
-  font-size: 20px;
-  font-weight: 500;
-  text-align: left;
-  color: white;
-  border: none;
-  border-right: 1px solid black;
-  width: 100%;
-`;
-
-const Steps = styled.p`
-  margin-bottom: 10px;
-  font-size: 15px;
-`;
+import { Container, TabButton, Steps } from "./Sidebar.styled";
 
 export const Sidebar = ({ dataApi }) => {
   const [activeTab, setActiveTab] = useState("tab1");

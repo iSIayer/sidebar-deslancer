@@ -3,7 +3,8 @@ import { SubMenu } from "./SubMenu";
 
 const Wrap1 = styled.div`
   background-color: #595959;
-  height: 100vh;
+  height: 200vh;
+  width: 100%;
 `;
 
 export const Step1 = ({ dataApi }) => {
