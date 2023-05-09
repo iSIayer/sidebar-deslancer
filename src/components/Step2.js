@@ -1,6 +1,4 @@
-// import { useState } from "react";
 import styled from "styled-components";
-import { SidebarData1 } from "./SidebarData";
 import { SubMenu } from "./SubMenu";
 
 const Wrap2 = styled.div`
@@ -9,9 +7,11 @@ const Wrap2 = styled.div`
 `;
 
 export const Step2 = ({ dataApi }) => {
+  const miData = dataApi.data[0].uidl[0].children[1].children;
+
   return (
     <Wrap2>
-      {SidebarData1.map((item, index) => {
+      {miData.map((item, index) => {
         return <SubMenu dataApi={dataApi} item={item} key={index} />;
       })}
     </Wrap2>

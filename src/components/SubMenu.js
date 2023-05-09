@@ -18,7 +18,7 @@ const SidebarLink = styled(Link)`
   }
 `;
 
-const SidebarLabel = styled.p`
+const SidebarLabel = styled.div`
   margin-left: 16px;
   text-decoration: none;
   color: white;
@@ -54,9 +54,9 @@ export const SubMenu = ({ item, dataApi }) => {
 
   return (
     <>
-      <SidebarLink to={item.path} onClick={dataApi && showSubnav}>
+      <SidebarLink onClick={dataApi && showSubnav}>
         <div>
-          <SidebarLabel>{item.title}</SidebarLabel>
+          <SidebarLabel>{item.text}</SidebarLabel>
         </div>
         <div>
           {dataApi && subnav ? (
@@ -78,15 +78,12 @@ export const SubMenu = ({ item, dataApi }) => {
           ) : null}
         </div>
       </SidebarLink>
+
       <hr />
       <SubnavWrapper>
         {subnav &&
-          item.subNav.map((item, index) => {
-            return (
-              <DropdownLink to={item.path} key={index}>
-                {item.title}
-              </DropdownLink>
-            );
+          item.children.map((item, index) => {
+            return <DropdownLink key={index}>{item.text}</DropdownLink>;
           })}
       </SubnavWrapper>
     </>
