@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
-import { Sidebar } from "./components/Sidebar";
+import { Sidebar } from "./components/Sidebar/Sidebar";
 
 const apiUrl =
   "http://68.183.30.252:3030/api/v1/projects/getOne/Kxx32UHXyx6GfCkkTD8p1";
 
-function App() {
+export const App = () => {
   const [dataApi, setDataApi] = useState(null);
 
   useEffect(() => {
@@ -30,6 +30,4 @@ function App() {
       </>
     </BrowserRouter>
   );
-}
-
-export default App;
+};

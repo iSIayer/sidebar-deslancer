@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SubMenu } from "./SubMenu";
+import { SubMenu } from "../SubMenu/SubMenu";
 
 const Wrap2 = styled.div`
   background-color: #595959;
