@@ -59,9 +59,15 @@ export const SubnavText = styled.p`
 `;
 
 export const SlIcon = css`
-  background: #2bc8f6;
-  padding: 0.3rem;
-  font-size: 20px;
+  font-size: 17px;
+`;
+
+export const SlIconContainer = styled.div`
+  background: rgb(5 153 196);
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const DownIcon = styled(SlArrowDown)`
