@@ -3,6 +3,11 @@ import styled, { css } from "styled-components";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 
 export const SidebarLink = styled(Link)`
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
   display: flex;
   color: white;
   justify-content: space-between;
@@ -11,7 +16,7 @@ export const SidebarLink = styled(Link)`
   list-style: none;
   height: 60px;
   text-decoration: none;
-  font-size: 15px;
+
   & :hover {
     cursor: pointer;
   }
@@ -52,7 +57,11 @@ export const SubnavImg = styled.img`
 
 export const SubnavText = styled.p`
   color: white;
-  font-size: 15px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
   margin-top: 10px;
   width: 4.5rem;
   text-align: center;

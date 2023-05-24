@@ -1,15 +1,27 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 400px;
-  background-color: gray;
+  width: 20rem;
+  height: 100%;
+`;
+export const TabNavMenu = styled.div`
+  display: ${(props) => (props.isActive ? "" : "none")};
+  background-color: #595959;
+  height: 200vh;
+  width: 100%;
 `;
 
-export const TabButton = styled.button`
-  padding: 1.5rem 0.7rem;
-  background: ${(props) => (props.isActive ? "#595959" : "#2d2d2d")};
+export const TabContainer = styled.div`
+  display: flex;
+  background: #2d2d2d;
+`;
+
+export const Tab = styled.div`
+  font-family: "Lato";
+  padding: 2.2rem 0.7rem;
+  background: ${(props) => (props.isActive ? "#595959" : "")};
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   text-align: left;
   color: white;
   border: none;
@@ -18,6 +30,10 @@ export const TabButton = styled.button`
 `;
 
 export const Steps = styled.p`
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin-bottom: 6px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.18;
 `;
