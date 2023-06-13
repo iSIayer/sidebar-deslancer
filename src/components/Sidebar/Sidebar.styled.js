@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 20rem;
-  height: 100%;
+  height: 100vh;
+  overflow-y: auto;
 `;
 export const TabNavMenu = styled.div`
   display: ${(props) => (props.isActive ? "" : "none")};
   background-color: #595959;
-  height: 200vh;
+  min-height: 100%;
+  max-height: max-content;
   width: 100%;
+  /* padding-right: 1rem; */
 `;
 
 export const TabContainer = styled.div`

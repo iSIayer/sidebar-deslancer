@@ -27,7 +27,7 @@ export const App = () => {
   }
   return (
     <BrowserRouter>
-      <div style={{ display: "flex" }}>
+      <div className="flex h-auto maindiv">
         <Sidebar dataApi={dataApi} />
         <Toolbar />
         <DownBar />

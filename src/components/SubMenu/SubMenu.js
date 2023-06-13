@@ -4,7 +4,6 @@ import {
   SidebarLink,
   SidebarLabel,
   SubnavImg,
-  SubnavLink,
   SubnavText,
   SlIconContainer,
   DownIcon,
@@ -59,17 +58,18 @@ export const SubMenu = ({ item, dataApi }) => {
             style={{ display: "flex", flexWrap: "wrap" }}
           >
             {item.children.map((item, index) => (
-              <motion.li key={index}>
-                <SubnavLink>
-                  <SubnavImg
-                    src={
-                      item.icon
-                        ? item.icon
-                        : "https://placehold.co/100x100?text=No+Image"
-                    }
-                  />
-                  <SubnavText>{item.text}</SubnavText>
-                </SubnavLink>
+              <motion.li
+                key={index}
+                className="flex-col items-center m-6 hover:cursor-pointer"
+              >
+                <SubnavImg
+                  src={
+                    item.icon
+                      ? item.icon
+                      : "https://placehold.co/100x100?text=No+Image"
+                  }
+                />
+                <SubnavText>{item.text}</SubnavText>
               </motion.li>
             ))}
           </motion.ul>

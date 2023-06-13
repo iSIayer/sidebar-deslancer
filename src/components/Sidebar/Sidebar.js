@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { SubMenu } from "../SubMenu/SubMenu";
 import {
   Container,
@@ -10,14 +10,22 @@ import {
 
 export const Sidebar = ({ dataApi }) => {
   const [activeTab, setActiveTab] = useState(1);
+  const tabNavMenuRef = useRef(null);
   const data = dataApi.data[0].uidl[0].children;
 
   const toggleTab = (index) => {
     setActiveTab(index);
   };
 
+  useEffect(() => {
+    // При смене активного таба прокручиваем меню к началу
+    if (tabNavMenuRef.current) {
+      tabNavMenuRef.current.scrollTo(0, 0);
+    }
+  }, [activeTab]);
+
   return (
-    <Container>
+    <Container className="scrollable">
       <TabContainer>
         {data &&
           data.map((item, index) => (
@@ -35,6 +43,7 @@ export const Sidebar = ({ dataApi }) => {
       {data &&
         data.map((elem, index) => (
           <TabNavMenu
+            ref={tabNavMenuRef}
             onClick={() => toggleTab(index + 1)}
             isActive={activeTab === index + 1}
             key={index}

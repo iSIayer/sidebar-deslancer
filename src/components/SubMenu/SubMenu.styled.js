@@ -28,24 +28,9 @@ export const SidebarLabel = styled.div`
   color: white;
 `;
 
-export const SubnavLink = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 25px;
-
-  & :hover {
-    cursor: pointer;
-  }
-`;
-
 export const SubnavList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-
-  /* display: grid;
-  grid-template-columns: repeat(2, 0fr);
-  grid-gap: 30px; */
 `;
 
 export const SubnavImg = styled.img`
